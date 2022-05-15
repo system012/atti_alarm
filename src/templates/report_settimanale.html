@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        body {font-size: 250%;}
+        th, td {
+          border: 1px solid black;
+          text-align: center;
+        }
+        .padded {padding: 8px;}
+        #atto {text-align: left;}
+        #motivo {text-align: left;}
+        td {padding: 10px;}
+        .tbody tr:nth-child(even) {
+            background-color: lightgray;
+        }
+        .tbody tr:nth-child(odd) {
+            background-color: white;
+        }
+        .tbody tr:first-child {
+            border: 1px;
+        }
+        .no_border {
+            border: 0px;
+        }
+        .lightblue {
+            background-color: #66cdaa;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>{{ page_title }}</h1>
+    {% if notifiche_data %}
+        <h3>Notifiche: {{ notifiche_length }}</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th class="no_border lightblue">ID PEX</th>
+                    <th class="no_border lightblue">Atto</th>
+                    <th class="no_border lightblue">Motivo</th>
+                    <th class="no_border lightblue padded">Avvisi</th>
+                    <th class="no_border lightblue padded ">Allarme</th>
+                </tr>
+            </thead>
+            <tbody class="tbody">
+                {% for data in notifiche_data.values() %}
+                    <tr>
+                        <td class="no_border">{{data['id_pex']}}</td>
+                        <td id="atto" class="no_border">{{data['atto']}}</td>
+                        <td id="motivo" class="no_border">{{data['motivo_scadenza']}}</td>
+                        <td class="no_border">{{data['numero_avvisi']}}</td>
+                        <td class="no_border">{{data['data_scadenza']}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+
+    {% if esecuzioni_data %}
+    <h3>Esecuzioni: {{ esecuzioni_length }}</h3>
+    <table>
+        <thead>
+            <tr>
+                <th class="no_border lightblue">ID PEX</th>
+                <th class="no_border lightblue">Atto</th>
+                <th class="no_border lightblue">Motivo</th>
+                <th class="no_border lightblue padded">Avvisi</th>
+                <th class="no_border lightblue padded">Allarme</th>
+            </tr>
+        </thead>
+        <tbody class="tbody">
+            {% for data in esecuzioni_data.values() %}
+                <tr>
+                    <td class="no_border">{{data['id_pex']}}</td>
+                    <td id="atto" class="no_border">{{data['atto']}}</td>
+                    <td id="motivo" class="no_border">{{data['motivo_scadenza']}}</td>
+                    <td class="no_border">{{data['numero_avvisi']}}</td>
+                    <td class="no_border">{{data['data_scadenza']}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endif %}
+  </body>
+</html>

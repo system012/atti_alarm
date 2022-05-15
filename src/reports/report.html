@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        body {font-size: 250%;}
+        th, td {
+          border: 1px solid black;
+          text-align: center;
+        }
+        .padded {padding: 8px;}
+        #atto {text-align: left;}
+        #motivo {text-align: left;}
+        td {padding: 10px;}
+        .tbody tr:nth-child(even) {
+            background-color: lightgray;
+        }
+        .tbody tr:nth-child(odd) {
+            background-color: white;
+        }
+        .tbody tr:first-child {
+            border: 1px;
+        }
+        .no_border {
+            border: 0px;
+        }
+        .lightblue {
+            background-color: lightblue;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Report giornaliero 14/05/2022</h1>
+    
+        <h3>Notifiche: 3</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th class="no_border lightblue">ID PEX</th>
+                    <th class="no_border lightblue">Atto</th>
+                    <th class="no_border lightblue">Motivo</th>
+                    <th class="no_border lightblue padded">Avvisi</th>
+                    <th class="no_border lightblue padded ">Allarme</th>
+                </tr>
+            </thead>
+            <tbody class="tbody">
+                
+                    <tr>
+                        <td class="no_border">2205028</td>
+                        <td id="atto" class="no_border">Citazione testi</td>
+                        <td id="motivo" class="no_border">Citazione</td>
+                        <td class="no_border">3</td>
+                        <td class="no_border">12/05</td>
+                    </tr>
+                
+                    <tr>
+                        <td class="no_border">2204088</td>
+                        <td id="atto" class="no_border">Sentenza GdP</td>
+                        <td id="motivo" class="no_border">Deposito</td>
+                        <td class="no_border">1</td>
+                        <td class="no_border">14/05</td>
+                    </tr>
+                
+                    <tr>
+                        <td class="no_border">2204087</td>
+                        <td id="atto" class="no_border">Sentenza GdP</td>
+                        <td id="motivo" class="no_border">Deposito</td>
+                        <td class="no_border">1</td>
+                        <td class="no_border">14/05</td>
+                    </tr>
+                
+            </tbody>
+        </table>
+    
+
+    
+  </body>
+</html>
