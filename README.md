@@ -1,0 +1,1 @@
+Software that tracks changes to MementoDB records ('atti'), calculates expiry date based on specific class rules and notifies the user via Telegram message by sending an HTML based report (created with Jinja2).
